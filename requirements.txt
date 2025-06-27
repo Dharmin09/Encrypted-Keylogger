@@ -1,0 +1,6 @@
+cryptography
+pynput
+requests
+pyautogui
+opencv-python
+python-dotenv
